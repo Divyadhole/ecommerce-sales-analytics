@@ -208,18 +208,9 @@ Detailed recommendations with ROI projections: [`insights/business_recommendatio
 
 ---
 
-## 📧 Contact
+## 🌐 View Live Dashboard
 
-**Divya Dhole**  
-📧 Email: [your.email@example.com](mailto:your.email@example.com)  
-💼 LinkedIn: [linkedin.com/in/divyadhole](https://linkedin.com/in/divyadhole)  
-🐙 GitHub: [@Divyadhole](https://github.com/Divyadhole)  
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
+**[📊 Interactive Dashboard](https://divyadhole.github.io/ecommerce-sales-analytics/dashboard/index.html)** - Explore the full analytics dashboard with interactive visualizations
 
 ---
 
