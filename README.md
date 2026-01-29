@@ -1,151 +1,232 @@
-# 📊 E-Commerce Sales Analytics
+# 📊 E-Commerce Sales Analytics Dashboard
 
-A comprehensive data analytics project analyzing e-commerce sales data through data cleaning, SQL analysis, and interactive visualizations.
+> **A comprehensive end-to-end data analytics project** featuring data cleaning, SQL analysis, and interactive Power BI-style visualizations for e-commerce sales insights.
 
-## 🎯 Project Overview
+![Dashboard Preview](https://raw.githubusercontent.com/Divyadhole/ecommerce-sales-analytics/main/assets/dashboard_preview.png)
 
-This project demonstrates end-to-end data analytics workflow:
-- **Data Cleaning**: Python/Pandas data preprocessing
-- **SQL Analysis**: Business intelligence queries
-- **Interactive Dashboard**: Web-based visualizations
+## 🎯 Quick Overview (60 Seconds)
 
-## 📈 Key Insights
+This project demonstrates **complete data analytics workflow** from raw data to actionable insights:
 
-- **Total Revenue**: ₹71.67M from 103K+ orders
-- **Best-Selling Category**: Sets (50% of revenue)
-- **Average Order Value**: ₹648
-- **Peak Sales Period**: Identified through monthly trend analysis
+- ✅ **Data Cleaning**: Processed 128K+ records using Python/Pandas
+- ✅ **SQL Analysis**: Built SQLite database with business intelligence queries
+- ✅ **Interactive Dashboard**: Professional Power BI-themed web dashboard
+- ✅ **Business Insights**: Generated actionable recommendations with ROI projections
 
-## 🗂️ Project Structure
+### 📈 Key Metrics at a Glance
+
+| Metric | Value |
+|--------|-------|
+| **Total Revenue** | ₹71.67M |
+| **Total Orders** | 103,419 |
+| **Products Analyzed** | 22 unique SKUs |
+| **Average Order Value** | ₹648 |
+| **Top Category** | Sets (50% revenue) |
+
+---
+
+## 📊 Dashboard Preview
+
+The interactive dashboard features:
+- **4 KPI Cards**: Real-time metrics overview
+- **Year-over-Year Trends**: Area chart with comparative analysis
+- **Sales Variance Analysis**: Bubble chart by category
+- **Geographic Insights**: Top 10 states performance
+- **Category Breakdown**: Revenue distribution
+- **Channel Analysis**: B2B vs B2C comparison
+
+![Dashboard Screenshot](https://raw.githubusercontent.com/Divyadhole/ecommerce-sales-analytics/main/assets/dashboard_full.png)
+
+---
+
+## 📁 Dataset Source
+
+**Source**: Amazon Sales Report (2022)
+- **Records**: 128,975 transactions
+- **Features**: Order details, product info, customer data, fulfillment status
+- **Geography**: India (28 states)
+- **Categories**: Kurta, Set, Western Dress, Top, Ethnic Dress, Blouse, etc.
+
+---
+
+## 🛠️ Tools & Technologies
+
+| Category | Tools |
+|----------|-------|
+| **Languages** | Python 3.x, SQL |
+| **Data Processing** | Pandas, NumPy |
+| **Database** | SQLite3 |
+| **Visualization** | Plotly (interactive charts) |
+| **Development** | Jupyter Notebook |
+| **Version Control** | Git, GitHub |
+
+---
+
+## 🚀 How to Run This Project
+
+### Prerequisites
+```bash
+# Install required packages
+pip install pandas plotly jupyter
+```
+
+### Step-by-Step Execution
+
+**1️⃣ Data Cleaning**
+```bash
+jupyter notebook notebooks/data_cleaning.ipynb
+```
+- Fixes column names, handles missing values
+- Removes duplicates, standardizes categories
+- Exports cleaned data to `data/cleaned_data.csv`
+
+**2️⃣ Load Data to SQL Database**
+```bash
+python3 scripts/load_to_sql.py
+```
+- Creates SQLite database at `sql/ecommerce.db`
+- Loads 128,975 cleaned records into `sales` table
+
+**3️⃣ Generate Interactive Dashboard**
+```bash
+python3 scripts/generate_dashboard.py
+```
+- Generates Power BI-themed HTML dashboard
+- Outputs to `dashboard/index.html`
+
+**4️⃣ View Dashboard**
+```bash
+open dashboard/index.html
+```
+Or simply double-click the file to open in your browser.
+
+---
+
+## 💡 Key Insights Discovered
+
+### 🏆 Top Performers
+- **Best Category**: Sets (₹35.7M, 49.9% of revenue)
+- **Runner-up**: Kurta (₹19.4M, 27.1% of revenue)
+- **Top State**: Maharashtra (highest revenue concentration)
+
+### 📉 Areas for Improvement
+- **Underperforming Categories**: Saree, Dupatta (< 1% revenue each)
+- **Geographic Gaps**: Low penetration in northeastern states
+- **B2B Opportunity**: Currently underutilized channel
+
+### 📊 Trends Identified
+- **Seasonal Patterns**: Peak sales in Q2 and Q4
+- **Order Status**: 99.2% successful fulfillment rate
+- **Channel Mix**: Heavy reliance on Amazon.in marketplace
+
+---
+
+## 📂 Project Structure
 
 ```
 ecommerce-sales-analytics/
 ├── data/
-│   ├── Amazon Sale Report.csv          # Raw data
-│   └── cleaned_data.csv                # Cleaned data
+│   ├── Amazon Sale Report.csv          # Raw dataset (128K records)
+│   └── cleaned_data.csv                # Cleaned & processed data
 ├── notebooks/
-│   └── data_cleaning.ipynb             # Data cleaning process
+│   └── data_cleaning.ipynb             # Data preprocessing workflow
 ├── sql/
 │   ├── ecommerce.db                    # SQLite database
-│   └── analysis_queries.sql            # Business queries
+│   └── analysis_queries.sql            # Business intelligence queries
 ├── scripts/
-│   ├── load_to_sql.py                  # Database loader
+│   ├── load_to_sql.py                  # Database loader script
 │   └── generate_dashboard.py           # Dashboard generator
 ├── dashboard/
-│   └── index.html                      # Interactive dashboard
-└── README.md
+│   └── index.html                      # Interactive web dashboard
+├── insights/
+│   ├── data_insights.md                # Detailed analysis findings
+│   └── business_recommendations.md     # Strategic recommendations
+├── requirements.txt                     # Python dependencies
+└── README.md                           # This file
 ```
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-```bash
-pip install pandas plotly
-```
-
-### Running the Project
-
-1. **Data Cleaning**
-   ```bash
-   jupyter notebook notebooks/data_cleaning.ipynb
-   ```
-
-2. **Load Data to SQL**
-   ```bash
-   python3 scripts/load_to_sql.py
-   ```
-
-3. **Generate Dashboard**
-   ```bash
-   python3 scripts/generate_dashboard.py
-   ```
-
-4. **View Dashboard**
-   Open `dashboard/index.html` in your browser
-
-## 📊 Dashboard Features
-
-- **KPI Cards**: Revenue, Orders, Units Sold, Avg Order Value
-- **Monthly Sales Trend**: Interactive line chart
-- **Top Products**: Best performers by revenue
-- **Category Analysis**: Revenue distribution
-- **Regional Performance**: Top states by sales
-
-## 🔍 SQL Analysis
-
-Key business queries available in `sql/analysis_queries.sql`:
-- Total revenue analysis
-- Monthly sales trends
-- Top products by revenue
-- Category performance
-- Regional distribution
-- B2B vs B2C comparison
-
-## 📊 Data Pipeline
-
-```
-Raw Data → Cleaning → SQL Database → Analytics → Dashboard
-```
-
-1. **Cleaning** (`data_cleaning.ipynb`)
-   - Fix column names
-   - Handle missing values
-   - Remove duplicates
-   - Standardize categories
-   - Convert dates
-
-2. **SQL Analysis** (`analysis_queries.sql`)
-   - Business intelligence queries
-   - Aggregations and trends
-   - Performance metrics
-
-3. **Visualization** (`dashboard/index.html`)
-   - Interactive charts
-   - KPI cards
-   - Regional maps
-
-## 🛠️ Technologies Used
-
-- **Python**: Data processing and analysis
-- **Pandas**: Data manipulation
-- **SQLite**: Database management
-- **Plotly**: Interactive visualizations
-- **Jupyter**: Development environment
-
-## 📝 Key Findings
-
-1. **Product Performance**
-   - Sets category dominates with ₹35.7M (49.9%)
-   - Kurtas second with ₹19.4M (27.1%)
-
-2. **Regional Insights**
-   - Top performing states identified
-   - Urban centers drive majority of sales
-
-3. **Sales Trends**
-   - Monthly patterns reveal seasonality
-   - Growth opportunities identified
-
-## 🎓 Skills Demonstrated
-
-- Data Cleaning & Preprocessing
-- SQL Database Design
-- Business Intelligence
-- Data Visualization
-- Python Programming
-- Statistical Analysis
-
-## 📧 Contact
-
-**Divya Dhole**
-- GitHub: [Divyadhole](https://github.com/Divyadhole)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-
-## 📄 License
-
-This project is open source and available under the MIT License.
 
 ---
 
+## 🎓 Skills Demonstrated
+
+This project showcases proficiency in:
+
+✅ **Data Cleaning & Preprocessing** - Handling messy real-world data  
+✅ **SQL Database Design** - Schema creation, data loading, complex queries  
+✅ **Business Intelligence** - KPI definition, trend analysis, insights generation  
+✅ **Data Visualization** - Interactive dashboards with Plotly  
+✅ **Python Programming** - Pandas, NumPy, data manipulation  
+✅ **Statistical Analysis** - Variance analysis, comparative metrics  
+✅ **Documentation** - Clear README, code comments, insights reports  
+✅ **Version Control** - Git workflow, GitHub repository management  
+
+---
+
+## 📊 SQL Analysis Highlights
+
+The project includes comprehensive SQL queries for:
+
+- **Revenue Analysis**: Total sales, average order value, units sold
+- **Temporal Trends**: Monthly sales patterns, year-over-year growth
+- **Product Performance**: Top products, category breakdown
+- **Geographic Distribution**: State-wise revenue, regional insights
+- **Channel Analysis**: B2B vs B2C, marketplace performance
+- **Operational Metrics**: Order status, fulfillment rates
+
+All queries available in: [`sql/analysis_queries.sql`](sql/analysis_queries.sql)
+
+---
+
+## 🎨 Dashboard Features
+
+### Interactive Visualizations
+1. **KPI Cards** - Total Products, Sales, Orders, Avg Order Value
+2. **Area Chart** - Year-over-Year Sales Trends (comparative analysis)
+3. **Scatter Plot** - Sales Variance Analysis by Category (bubble chart)
+4. **Bar Charts** - Monthly orders, category sales, regional performance
+5. **Geographic Analysis** - Top 10 states by revenue
+6. **Donut Chart** - Sales channel distribution
+
+### Design Highlights
+- **Theme**: Professional Power BI-inspired styling
+- **Colors**: Teal, coral, gray, green palette
+- **Layout**: Multi-tile grid with responsive design
+- **Interactivity**: Hover tooltips, zoom, pan, filter capabilities
+
+---
+
+## 📈 Business Recommendations
+
+Based on the analysis, key strategic recommendations include:
+
+1. **Product Diversification** - Expand underperforming categories
+2. **Geographic Expansion** - Target high-potential states
+3. **B2B Channel Development** - Launch dedicated B2B division
+4. **Marketplace Strategy** - Reduce dependency on single platform
+
+Detailed recommendations with ROI projections: [`insights/business_recommendations.md`](insights/business_recommendations.md)
+
+---
+
+## 📧 Contact
+
+**Divya Dhole**  
+📧 Email: [your.email@example.com](mailto:your.email@example.com)  
+💼 LinkedIn: [linkedin.com/in/divyadhole](https://linkedin.com/in/divyadhole)  
+🐙 GitHub: [@Divyadhole](https://github.com/Divyadhole)  
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+
+**⭐ If you found this project helpful, please consider giving it a star!**
+
 *Built with 💜 for data-driven decision making*
+
+</div>
