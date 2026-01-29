@@ -34,7 +34,6 @@ The interactive dashboard features:
 - **Category Breakdown**: Revenue distribution
 - **Channel Analysis**: B2B vs B2C comparison
 
-![Dashboard Screenshot](https://raw.githubusercontent.com/Divyadhole/ecommerce-sales-analytics/main/assets/dashboard_full.png)
 
 ---
 
