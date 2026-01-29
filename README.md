@@ -2,7 +2,6 @@
 
 > **A comprehensive end-to-end data analytics project** featuring data cleaning, SQL analysis, and interactive Power BI-style visualizations for e-commerce sales insights.
 
-![Dashboard Preview](https://raw.githubusercontent.com/Divyadhole/ecommerce-sales-analytics/main/assets/dashboard_preview.png)
 
 ## 🎯 Quick Overview (60 Seconds)
 
